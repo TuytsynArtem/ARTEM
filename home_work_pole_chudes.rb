@@ -5,7 +5,7 @@ t=1
 pobeda=0
 kolvo_otgadannih=0
 slovo=words[rand(words.size)]
-slovosize=slovo.size.to_i
+slovosize=slovo.size
 skritiebukvi=(1..slovo.size).to_a
 kolvo_popitok=0
 require "google/cloud/translate"
@@ -34,7 +34,7 @@ puts "Перевод: #{translation}"
 
 begin
 puts"введите букву"
-bukva=gets
+bukva=gets.chomp
 i=0
 #################
 while i!=slovosize
@@ -78,3 +78,4 @@ kolvo_popitok=kolvo_popitok+1
 end
 #################
 end while pobeda!=1
+puts"для отгадывания слова вам понадобилось "
